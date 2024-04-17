@@ -4,7 +4,7 @@ Web Aplikasi ini dijalankan dalam Mode Virtualisasi melali Sistem Docker, dengan
 - CMS Web File Manager [(Tinyfilemanager)](https://tinyfilemanager.github.io)
 
 # 1. DIREKTORI #
-Struktur Direktori
+a] Struktur Direktori
 
      web_dir
       +  app
@@ -13,14 +13,15 @@ Struktur Direktori
          - umum
          - user
          
-Persiapan Direktori
+b] Persiapan Direktori
 
     mkdir -p /root/web_dir/data /root/web_dir/app && \
     chown www-data:www-data /root/web_dir/data  && \
     cd /root/web_dir/app
+    
 
 # 2. Running Container  # 
-Download Skrip "web_dir"
+a) Download Skrip "web_dir"
 
     curl -o index.php https://raw.githubusercontent.com/otnamrehus/umahserver/main/apps/web-dir/app/index.php
     
@@ -28,7 +29,7 @@ Download Skrip "web_dir"
 
     wget https://raw.githubusercontent.com/otnamrehus/umahserver/main/apps/web-dir/app/index.php
 
-Jalankan Container
+b) Jalankan Container
 
     docker run -d  \
        -p 3333:80  \
@@ -41,12 +42,12 @@ Jalankan Container
      tinyfilemanager/tinyfilemanager:master
 
 # 3. Jalankan  #
-   Akses Browser
+   a] Akses Browser
     
     https://IP_Adresss:3333
    
   
-   Akun Pengguna
+   b] Akun Pengguna
    
     admin [admin@123]
     user  [12345]
@@ -61,12 +62,13 @@ Contoh:
         'admin' => '$2y$10$/K.hjNr84lLNDt8fTXjoI.DBp6PpeyoJ.mGwrrLuCZfAwfSAGqhOW', //admin@123
         'user' => '$2y$10$Fg6Dz8oH9fPoZ2jJan5tZuv6Z4Kp7avtQ9bDfrdRntXtPeiMAZyGO', //1234
 
-   Akun Password
+   c] Akun Password
    
    Password Generator: https://tinyfilemanager.github.io/docs/pwd.html
 
 
-   Akses Direktori Akun
+
+   d] Akses Direktori Akun
    
     // user specific directories
     // array('Username' => 'Directory path', 'Username2' => 'Directory path', ...)
