@@ -10,26 +10,42 @@ Struktur Direktori
          
 Persiapan Direktori
 
-    mkdir -p /root/direktori/data /root/direktori/app && \
-    chown www-data:www-data /root/direktori/data  && \
-    touch /root/direktori/app/index.php && touch /root/direktori/app/index.php
+    mkdir -p /root/web_dir/data /root/web_dir/app && \
+    chown www-data:www-data /root/web_dir/data  && \
+    cd /root/web_dir/app
 
 # 2. Running Container  # 
-Download Materi
+Download Skrip "web_dir"
 
-    git clone .... 
+    curl -o index.php https://raw.githubusercontent.com/otnamrehus/umahserver/main/apps/web-dir/app/index.php
+    
+   atau 
+
+    wget https://raw.githubusercontent.com/otnamrehus/umahserver/main/apps/web-dir/app/index.php
 
 Jalankan Container
-    
+
     docker run -d  \
        -p 2222:80  \
        -p 6222:22  \
-       -v /root/direktori/data:/var/www/html/data  \
-       -v /root/direktori/app/index.php:/var/www/html/index.php  \
+       -v /root/web_dir/data:/var/www/html/data  \
+       -v /root/web_dir/app/index.php:/var/www/html/index.php  \
        --name dirfile  \
        --hostname dirfile  \
        --restart always \
      tinyfilemanager/tinyfilemanager:master
 
-# Console Container  #
+# 3. Jalankan  #
+   Akses Browser
+    
+    https://IP_Adresss:2222
+   
+  
+   Akun Pengguna
+   
+    admin [admin@123]
+    user  [12345]
+    
+
+# 4. Akses ke Console Host Container  #
     docker exec -it direktori bash
