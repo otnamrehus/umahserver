@@ -36,8 +36,8 @@ b) Jalankan Container
        -p 3322:22  \
        -v /root/web_dir/data:/var/www/html/data  \
        -v /root/web_dir/app/index.php:/var/www/html/index.php  \
-       --name dirfile  \
-       --hostname dirfile  \
+       --name web_dir  \
+       --hostname web_dir  \
        --restart always \
      tinyfilemanager/tinyfilemanager:master
 
