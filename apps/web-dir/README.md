@@ -65,6 +65,17 @@ Contoh:
    
    Password Generator: https://tinyfilemanager.github.io/docs/pwd.html
 
+
+   Akses Direktori Akun
+   
+    // user specific directories
+    // array('Username' => 'Directory path', 'Username2' => 'Directory path', ...)
+    $directories_users = array(
+        'user' => 'data/user',
+        'guru' => 'data/guru',
+        'tu' => 'data/tu'
+    );
+
     
 
 
