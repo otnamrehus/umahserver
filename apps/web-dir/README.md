@@ -78,7 +78,23 @@ Contoh:
         'tu' => 'data/tu'
     );
 
-    
+   e] Akses file 
+
+      // Allowed file extensions for create and rename files
+      // e.g. 'txt,html,css,js'
+      $allowed_file_extensions = 'gif,png,jpg,html,txt,pdf,docx,doc,xlsx,xls,ppt,pptx';
+ 
+      // Allowed file extensions for upload files
+      // e.g. 'gif,png,jpg,html,txt'
+      $allowed_upload_extensions = 'gif,png,jpg,html,txt,pdf,docx,doc,xlsx,xls,ppt,pptx';
+
+   f] Hidden index.php
+
+      // Files and folders to excluded from listing
+      // e.g. array('myfile.html', 'personal-folder', '*.php', ...)
+      $exclude_items = array('index.php'); //insert index.php
+
+
 
 
 # 4. Akses ke Console Host Container  #
