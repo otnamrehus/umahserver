@@ -1,3 +1,7 @@
+Web Aplikasi ini dijalankan dalam Mode Virtualisasi melali Sistem Docker, dengan spesifikasi Layanan Web Server :
+- Alpine OS,
+- PHP 5.5,
+- CMS Web File Manager (Tinyfilemanager)  
 # 1. DIREKTORI #
 Struktur Direktori
 
