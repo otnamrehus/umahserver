@@ -1,7 +1,8 @@
 Web Aplikasi ini dijalankan dalam Mode Virtualisasi melali Sistem Docker, dengan spesifikasi Layanan Web Server :
 - Alpine OS,
 - PHP 5.5,
-- CMS Web File Manager (Tinyfilemanager)  
+- CMS Web File Manager [(Tinyfilemanager)](https://tinyfilemanager.github.io)
+
 # 1. DIREKTORI #
 Struktur Direktori
 
@@ -42,14 +43,30 @@ Jalankan Container
 # 3. Jalankan  #
    Akses Browser
     
-    https://IP_Adresss:2222
+    https://IP_Adresss:3333
    
   
    Akun Pengguna
    
     admin [admin@123]
     user  [12345]
+    *user_new [12345]
+
+Contoh:
+
+    // Login user name and password
+    // Users: array('Username' => 'Password', 'Username2' => 'Password2', ...)
+    // Generate secure password hash - https://tinyfilemanager.github.io/docs/pwd.html
+    $auth_users = array(
+        'admin' => '$2y$10$/K.hjNr84lLNDt8fTXjoI.DBp6PpeyoJ.mGwrrLuCZfAwfSAGqhOW', //admin@123
+        'user' => '$2y$10$Fg6Dz8oH9fPoZ2jJan5tZuv6Z4Kp7avtQ9bDfrdRntXtPeiMAZyGO', //1234
+
+   Akun Password
+   
+   Password Generator: https://tinyfilemanager.github.io/docs/pwd.html
+
     
 
+
 # 4. Akses ke Console Host Container  #
-    docker exec -it direktori bash
+    docker exec -it web_dir bash
