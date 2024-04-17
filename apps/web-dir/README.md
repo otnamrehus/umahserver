@@ -30,8 +30,8 @@ Download Skrip "web_dir"
 Jalankan Container
 
     docker run -d  \
-       -p 2222:80  \
-       -p 6222:22  \
+       -p 3333:80  \
+       -p 3322:22  \
        -v /root/web_dir/data:/var/www/html/data  \
        -v /root/web_dir/app/index.php:/var/www/html/index.php  \
        --name dirfile  \
