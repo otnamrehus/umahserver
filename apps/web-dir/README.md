@@ -39,6 +39,7 @@ b) Jalankan Container
        --name web_dir  \
        --hostname web_dir  \
        --restart always \
+     #FOR x86_64  
      tinyfilemanager/tinyfilemanager:master
      
      #FOR ARM64V8
