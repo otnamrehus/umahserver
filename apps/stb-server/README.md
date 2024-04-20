@@ -9,6 +9,10 @@
     apt update --allow-unauthenticated 
 
 # INSTALL
-    chmod
+    wget https://raw.githubusercontent.com/otnamrehus/umahserver/main/apps/stb-server/install.sh && \
+    chmod +x install.sh
+    ./install.sh
+    
+    
     
     
