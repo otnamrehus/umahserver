@@ -40,6 +40,9 @@ b) Jalankan Container
        --hostname web_dir  \
        --restart always \
      tinyfilemanager/tinyfilemanager:master
+     
+     #FOR ARM64V8
+     #masihgurutkj/tonifilemanager:1.0
 
 # 3. Jalankan  #
    a] Akses Browser
