@@ -34,13 +34,14 @@ sudo systemctl status docker &&\
 docker-compose --version && \
 
 
-### 4. CLOUDFLARE ###
+### 4. ZEROTIER [VPN-IPTunnel]###
+sudo curl -s 'https://raw.githubusercontent.com/zerotier/ZeroTierOne/master/doc/contact%40zerotier.com.gpg' | gpg --import &&  \
+if z=$(curl -s 'https://install.zerotier.com/' | gpg); then echo "$z" | sudo bash; fi && \
+zerotier-cli join 565799d8f6bdd3cd
+
+### 5. CLOUDFLARE [Domain] ###
+
 curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64.deb &&  \
 sudo dpkg -i cloudflared.deb &&  \
 sudo cloudflared service install eyJhIjoiY2E0MmJhZjA3NzJmMDI0ZDgxNTNkMTdhMDk1OGIwMWYiLCJ0IjoiMDRkZjQ0NzItZGRhOS00MWFlLWJjNTEtMjkyZGEyYmJiYzhiIiwicyI6IllXSTROV0UwTURBdE1XTTNNUzAwTWpjeExXRmhOV1V0WlRoak9EUmhOemRrWXpkaCJ9
 
-
-### 5. ZEROTIER ###
-sudo curl -s 'https://raw.githubusercontent.com/zerotier/ZeroTierOne/master/doc/contact%40zerotier.com.gpg' | gpg --import &&  \
-if z=$(curl -s 'https://install.zerotier.com/' | gpg); then echo "$z" | sudo bash; fi && \
-zerotier-cli join 565799d8f6bdd3cd
