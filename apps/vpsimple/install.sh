@@ -27,4 +27,9 @@ zerotier-cli join 8bd5124fd6f987b8  && \
 
 ######### Tambahkan  ini jika ada Pesan kesalahan "No UTF-8 locale detected" #############
 sudo sed -i '280s/^#//' /etc/locale.gen && \
-sudo locale-gen && sudo update-locale LANG=en_US.UTF-8 
+sudo locale-gen && sudo update-locale LANG=en_US.UTF-8 &&\
+
+######### Cloudflare ############
+curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb && 
+sudo dpkg -i cloudflared.deb && 
+sudo cloudflared service install eyJhIjoiY2E0MmJhZjA3NzJmMDI0ZDgxNTNkMTdhMDk1OGIwMWYiLCJ0IjoiNGQ2MDdhYTItZDNiOS00MDA4LTgwZmUtOTRiMGYxYTYyYmY3IiwicyI6Ik0yVTJPREEyTnpRdFl6ZzBaaTAwWkRkaExXRTJNak10TlRoaE5XWXhPRGt5TWpNMCJ9
