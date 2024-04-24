@@ -1,3 +1,7 @@
+  # Direktori
+    mkdir -p ~/ghost/content ~/ghost/data
+    cd ghost
+    
   # Jalankan Stack 
     docker-compose -p 'ghost' up -d
 
