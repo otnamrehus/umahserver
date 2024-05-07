@@ -1,0 +1,14 @@
+version: '3'
+services:
+  xampp:
+    container_name: xampp
+    image: tomsik68/xampp:7.4.33
+    hostname: xampp
+    restart: always
+    ports:
+      - "1106:3306"
+      - "1122:22"
+      - "1111:80"
+    volumes:
+      - "/root/data/xampp:/opt/lampp/htdocs:rw"
+    working_dir: "/opt/lampp/htdocs"
