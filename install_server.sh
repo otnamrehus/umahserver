@@ -5,7 +5,7 @@ set -e
 # Fungsi untuk Update dan Upgrade Sistem
 update_system() {
     echo "Updating system..."
-    apt update -y && apt upgrade -y
+    apt update -y --fix-missing && apt upgrade -y
 }
 
 # Fungsi untuk Instalasi Paket-Paket Umum
@@ -17,6 +17,7 @@ install_general_packages() {
 
 # Fungsi untuk Konfigurasi SSH
 configure_ssh_server() {
+    apt update -y --fix-missing 
     apt-get install -y openssh-server 
     echo "Configuring SSH..."
     sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.backup
@@ -29,6 +30,7 @@ configure_ssh_server() {
 # Fungsi untuk Instalasi Docker
 install_docker_engine() {
     echo "Installing Docker..."
+    apt update -y --fix-missing 
     apt-get install -y docker docker-compose
     sudo groupadd docker || true
     sudo usermod -aG docker $USER
