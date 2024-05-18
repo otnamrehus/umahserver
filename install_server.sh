@@ -11,12 +11,13 @@ update_system() {
 # Fungsi untuk Instalasi Paket-Paket Umum
 install_general_packages() {
     echo "Installing general packages..."
-    apt -y install screen sudo net-tools curl git gpg openssh-server
+    apt -y install screen sudo net-tools curl git gpg 
     sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
 }
 
 # Fungsi untuk Konfigurasi SSH
 configure_ssh_server() {
+    apt-get install -y openssh-server 
     echo "Configuring SSH..."
     sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.backup
     sudo sh -c "echo 'PermitRootLogin Yes' >> /etc/ssh/sshd_config"
@@ -28,7 +29,7 @@ configure_ssh_server() {
 # Fungsi untuk Instalasi Docker
 install_docker_engine() {
     echo "Installing Docker..."
-    apt install -y docker docker-compose
+    apt-get install -y docker docker-compose
     sudo groupadd docker || true
     sudo usermod -aG docker $USER
     sudo systemctl enable docker
