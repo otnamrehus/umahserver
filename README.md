@@ -3,7 +3,9 @@ Hanya Buat Server Rumahan
 
 ### 0. Unduh:
 apt-get install git && \\
+
 git clone https://github.com/otnamrehus/umahserver.git && \\
+
 cd umahserver
 
 ### 1. Instalasi Dasar Server:
