@@ -1,4 +1,4 @@
-Skrip ini instalasi Ubuntu untuk melakukan instalasi Pakeryang disebutkan berikut:
+Skrip instalasi Ubuntu untuk melakukan instalasi Pakeryang disebutkan berikut:
 
 	WPS Office 2019
 	Chromium
