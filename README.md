@@ -1,5 +1,6 @@
-# umahserver
-Hanya Buat Server Rumahan
+### umahserver
+---------------------------------------------------------------------
+### Hanya Buat Server Rumahan
 
 ### Unduh:
     apt-get install git && \
@@ -7,8 +8,13 @@ Hanya Buat Server Rumahan
     cd umahserver
 
 ### Instalasi Dasar Server:
-    chmod +x install_server.sh && \
-    ./install_server.sh
+    - SSH, 
+    - Docker, 
+    - Portainer (GUI Docker), 
+    - Zerotier (Tunneling/VPN).
+    
+    chmod +x install_ssh-docker-portainer-zerotier.sh && \
+    ./install_ssh-docker-portainer-zerotier.sh
 
 ### Service App :
-    [Web Direktori [TinyFileManager]](https://github.com/otnamrehus/umahserver/tree/main/apps/web-dir)
+    [Web Direktori [TinyFileManager]] (https://github.com/otnamrehus/umahserver/tree/main/apps/web-dir)
