@@ -32,4 +32,4 @@ sudo locale-gen && sudo update-locale LANG=en_US.UTF-8 &&\
 ######### Cloudflare ############
 curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb && 
 sudo dpkg -i cloudflared.deb && 
-sudo cloudflared service install eyJhIjoiY2E0MmJhZjA3NzJmMDI0ZDgxNTNkMTdhMDk1OGIwMWYiLCJ0IjoiNGQ2MDdhYTItZDNiOS00MDA4LTgwZmUtOTRiMGYxYTYyYmY3IiwicyI6Ik0yVTJPREEyTnpRdFl6ZzBaaTAwWkRkaExXRTJNak10TlRoaE5XWXhPRGt5TWpNMCJ9
+sudo cloudflared service install TOKEN_HERE
