@@ -2,12 +2,12 @@
 ---------------------------------------------------------------------
 ### Hanya Buat Server Rumahan
 
-### Unduh:
+### 1. Unduh:
     apt-get install git && \
     git clone https://github.com/otnamrehus/umahserver.git && \
     cd umahserver
 
-### Instalasi Dasar Server:
+### 2. Instalasi Dasar Server:
     - SSH, 
     - Docker, 
     - Portainer (GUI Docker), 
@@ -16,5 +16,5 @@
     chmod +x install_ssh-docker-portainer-zerotier.sh && \
     ./install_ssh-docker-portainer-zerotier.sh
 
-### Service App :
+### 3. Instalasi Service App :
     [Web Direktori [TinyFileManager]] (https://github.com/otnamrehus/umahserver/tree/main/apps/web-dir)
