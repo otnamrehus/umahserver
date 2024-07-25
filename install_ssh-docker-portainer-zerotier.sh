@@ -31,11 +31,28 @@ configure_ssh_server() {
 install_docker_engine() {
     echo "Installing Docker..."
     apt update -y --fix-missing 
-    apt-get install -y docker docker-compose
+
+    # Try installing docker package
+    if apt-get install -y docker docker-compose; then
+        echo "Docker installed successfully using 'docker' package."
+    else
+        echo "Failed to install Docker using 'docker' package. Trying 'docker.io' package..."
+        
+        # If docker package installation fails, try docker.io
+        if apt-get install -y docker.io docker-compose; then
+            echo "Docker installed successfully using 'docker.io' package."
+        else
+            echo "Failed to install Docker using both 'docker' and 'docker.io' packages."
+            return 1
+        fi
+    fi
+
     sudo groupadd docker || true
     sudo usermod -aG docker $USER
     sudo systemctl enable docker
     sudo systemctl start docker
+
+    echo "Docker installation and setup completed."
 }
 
 # Fungsi untuk Instalasi Portainer
