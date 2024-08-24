@@ -1,4 +1,5 @@
-docker run -d \
+#DOCKER RUN#
+ocker run -d \
   --name ttydbridge \
   -e PORT=2222 \
   -v /opt:/opt \
