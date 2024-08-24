@@ -1,4 +1,4 @@
-# DOCKER RUN#
+# DOCKER RUN #
     docker run -d \
     --name ttydbridge \
     -e PORT=2222 \
