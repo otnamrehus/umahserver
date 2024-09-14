@@ -33,7 +33,7 @@ install_docker_engine() {
     apt update -y --fix-missing 
 
     # Try installing docker package
-    if apt-get install -y docker docker-compose; then
+    if apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose; then
         echo "Docker installed successfully using 'docker' package."
     else
         echo "Failed to install Docker using 'docker' package. Trying 'docker.io' package..."
@@ -50,7 +50,7 @@ install_docker_engine() {
     sudo groupadd docker || true
     sudo usermod -aG docker $USER
     sudo systemctl enable docker
-    sudo systemctl start docker
+    sudo systemctl restart docker
 
     echo "Docker installation and setup completed."
 }
