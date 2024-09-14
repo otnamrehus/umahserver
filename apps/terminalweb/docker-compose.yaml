@@ -1,11 +1,11 @@
-version: "3.8"
+version: "3.3"
 
 services:
   ttydbridge:
     # build: .
     # image: ttdybridge
     image: cp0204/ttydbridge:latest
-    container_name: ttydbridge
+    container_name: terminalweb
     environment:
       EXEC_DIR: "/opt"
       START_COMMAND: "login"
