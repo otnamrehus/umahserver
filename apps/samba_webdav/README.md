@@ -24,7 +24,9 @@ http://IP_ADDRESS:4444  # webdav
     
 # Akses Samba Windows / Android Apk [CX File Explorer]
 ```
-IP_ADDRESS:4445  # alamat IP samba server
+smb://IP_ADDRESS:4445  # dari windows explorer / file explorer
+# atau dengan perintah ini
+smb://samba@192.168.192.212:4444
  - samba
  - secret
 ```
