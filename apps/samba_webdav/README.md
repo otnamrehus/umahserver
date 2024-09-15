@@ -1,3 +1,5 @@
+STB MINI SERVER [B806H V1] (Passed Test)
+
 # Direktori Data
 ```
 mkdir -p ~/hardisk/data
