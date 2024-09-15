@@ -1,0 +1,27 @@
+version: '3.3'
+
+services:
+  webdav:
+    image: derkades/webdav:4.20.2
+    container_name: webdavserver
+    volumes:
+      - ~/hardisk/data:/data  # Direktori yang sama untuk WebDAV dan Samba
+    ports:
+      - "4444:80"             # Port 4445 di host dipetakan ke port 80 di container
+    environment:
+      - USERNAME=samba          # Username yang sama untuk WebDAV dan Samba
+      - PASSWORD=secret          # Password yang sama untuk WebDAV dan Samba
+    restart: unless-stopped
+
+  samba:
+    image: dockurr/samba:4.20.2
+    container_name: sambaserver
+    environment:
+      - USER=samba              # Username yang sama untuk WebDAV dan Samba
+      - PASS=secret              # Password yang sama untuk WebDAV dan Samba
+     # - RW=true                  # Akses baca-tulis
+    ports:
+      - "4445:445"               # Port 4444 di host dipetakan ke port 445 di container
+    volumes:
+      - ~/hardisk/data:/storage  # Direktori yang sama untuk WebDAV dan Samba
+    restart: always
