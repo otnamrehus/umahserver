@@ -13,7 +13,7 @@
    docker stop | stop windows
    ```
 4. Windows tidak dijalankan otomatis
-  ```
+   ```
    docker update --restart=no windows
-  ```
+   ```
 5. Gunakan Remode Desktop Manager (Windows) / Remmina(Linux)
